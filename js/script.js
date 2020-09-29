@@ -1,28 +1,32 @@
 const products = [
     {
         name: "Product A",
-        delivered: false,
+        delivered: true,
     },
     {
         name: "Product B",
-        delivered: false,
+        delivered: true,
     },
     {
         name: "Product C",
-        delivered: true,
+        delivered: false,
     },
 ];
 
 const container = document.querySelector(".product-container");
 
 for (let i = 0; i < products.length; i++) {
-    // let colour = "red";
 
-    // if (products[i].delivered) {
-    //     colour = "green;";
-    // }
+    //let colour = "red";
 
+    //if (products[i].delivered) {
+    //  colour = "green";
+    //}
+
+    // using a ternary operator instead of using an if statement to be more space efficient
     const colour = products[i].delivered ? "green" : "red";
-
     container.innerHTML += `<div class="product" style="background-color: ${colour}">${products[i].name}</div>`;
 }
+
+
+
